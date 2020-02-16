@@ -3,7 +3,7 @@ date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red","[]          ASU JINGAN FUFUFU          []\n");
 echo color("green","[]           NOM NOMAN TAEKK           []\n");
-echo color("yellow","[] Jam  : ".date('[d-m-Y] [H:i:s]')."  []\n");
+echo color("yellow","[] Jam Coli  : ".date('[d-m-Y] [H:i:s]')."  []\n");
 echo color("red","[] Nomor Pakai 62  []\n");
 function change(){
         $nama = nama();
@@ -29,7 +29,7 @@ function change(){
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc GOFOOD021120A");
+        echo "\n".color("yellow","!] Klem voc GOFOOD021120A");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -42,7 +42,7 @@ function change(){
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        echo "\n".color("yellow","!] Claim voc GOFOOD021120B");
+        echo "\n".color("yellow","!] Klem voc GOFOOD021120B");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -56,7 +56,7 @@ function change(){
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messagealt01);
-        echo "\n".color("yellow","!] Claim voc AYOCOBAGOJEK");
+        echo "\n".color("yellow","!] Klem voc AYOCOBAGOJEK");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -71,7 +71,7 @@ function change(){
         }else{
         echo "\n".color("green","+] Message: ".$messagealt02);
         goride:
-        echo "\n".color("yellow","!] Claim voc COBAINGOJEK");
+        echo "\n".color("yellow","!] Klem voc COBAINGOJEK");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -105,7 +105,7 @@ function change(){
          echo color("red","========( PIN ANDA = 112233 )========")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
-         echo "Otp set pin: ";
+         echo "Otp pin: ";
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          echo $verifotpsetpin;
